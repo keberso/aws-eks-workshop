@@ -60,7 +60,7 @@ This lab prepares your workspace to interact with AWS EKS by installing the requ
 
 4. Select "Create Role":
 
-    Click "Create Role" ![role-8](./images/role-8.png)
+    ![role-8](./images/role-8.png)
 
 3. Attach EC2 Role to Cloud9:
 
