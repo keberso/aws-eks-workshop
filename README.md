@@ -4,9 +4,9 @@
 
 Build your Cloud9 Development Environment.
 
-## [Install Kubernetes Tools - Lab 1](./1-Install Kubernetes Tools)
+## [Install Kubernetes Tools - Lab 1](./1-install-kubernetes-tools)
 
-Deploy an EKS cluster using [eksctl](https://eksctl.io/).
+Install Kubernetes tools into your Cloud9 Development Enviornment.
 
 ## [Preparing EKS Cluster for Applications - Lab 2](./2-preparing-eks-cluster )
 
