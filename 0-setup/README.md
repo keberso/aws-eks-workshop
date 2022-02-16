@@ -52,7 +52,7 @@ This lab prepares your workspace to interact with AWS EKS by installing the requ
 
 2. Navigate to IAM:
 
-    Search for and select "IAM" ![role-6](./images/role-6.png)
+    ![role-6](./images/role-6.png)
 
 3. Select "Roles":
 
