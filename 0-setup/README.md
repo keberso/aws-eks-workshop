@@ -56,7 +56,7 @@ This lab prepares your workspace to interact with AWS EKS by installing the requ
 
 3. Select "Roles":
 
-    Click "Roles" ![role-7](./images/role-7.png)
+    ![role-7](./images/role-7.png)
 
 4. Select "Create Role":
 
