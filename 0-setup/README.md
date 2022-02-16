@@ -62,6 +62,10 @@ This lab prepares your workspace to interact with AWS EKS by installing the requ
 
     ![role-8](./images/role-8.png)
 
+5. Select "AWS Service" and "EC2":
+
+    ![role-8](./images/role-9.png)
+
 3. Attach EC2 Role to Cloud9:
 
     Click Manage EC2 Instance in Cloud9 ![role-3](./images/role-3.png)
