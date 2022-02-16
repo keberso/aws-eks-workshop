@@ -1,18 +1,10 @@
 # AWS Elastic Kubernetes Service (EKS) Workshop
 
-This workshop is designed to help users learn Kubernetes on AWS using EKS. To start, download the project to a working directory on [AWS Cloud9 Workspace](https://console.aws.amazon.com/cloud9/home/product?p=c9&cp=bn&ad=c):
-
-```bash
-git clone https://github.com/keberso/aws-eks-workshop.git
-```
-
-This gives users the ability to utilize some of the scripts locally and save time creating files from scratch. Each directory is an individual lab.
-
 ## [Project Setup - Lab 0](./0-setup)
 
-Prepare your Cloud9 Workspace to interact with AWS EKS by installing the required utilities.
+Build your Cloud9 Development Environment.
 
-## [Launching an EKS Cluster - Lab 1](./1-launching-eks-cluster)
+## [Install Kubernetes Tools - Lab 1](./1-Install Kubernetes Tools)
 
 Deploy an EKS cluster using [eksctl](https://eksctl.io/).
 
