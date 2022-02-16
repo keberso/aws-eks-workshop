@@ -1,6 +1,6 @@
 # Project Setup - Lab 0
 
-In this lab will will build your Cloud9 Development Environment and provide it the necessary permissions to interact with the required services. 
+In this lab we will build your Cloud9 Development Environment and provide it the necessary permissions to interact with the required services. 
 
 ## Build Cloud9 Development Enviornment
 
