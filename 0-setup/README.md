@@ -4,9 +4,29 @@ This lab prepares your Cloud9 Development Environment to interact with AWS EKS b
 
 ## Attach EC2 Role to Cloud9 Workspace
 
+1. Browse and launch Cloud9: 
+
+    ![role-12](./images/role-12.png)
+
+2. Select "Create Environment": 
+
+    ![role-13](./images/role-13.png)
+
+3. Name the new environment "eksworkshop" and select "Next step": 
+
+    ![role-14](./images/role-14.png)
+
+4. Choose “t3.small” for instance type, take all default values and click “Next step”: 
+
+    ![role-15](./images/role-15.png)
+
+5. Select “Create environment”: 
+
+    ![role-16](./images/role-16.png)
+
 1. Disable Cloud9 Temporary Credentials: 
 
-![role-1](./images/role-1.png)
+    ![role-1](./images/role-1.png)
 
 2. Navigate to IAM:
 
