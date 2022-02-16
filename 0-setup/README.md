@@ -64,13 +64,17 @@ This lab prepares your workspace to interact with AWS EKS by installing the requ
 
 5. Select "AWS Service" and "EC2":
 
-    ![role-8](./images/role-9.png)
+    ![role-9](./images/role-9.png)
 
 6. Filter on  "Administrator" and select "AdministratorAccess":
 
-    ![role-8](./images/role-10.png)
+    ![role-10](./images/role-10.png)
 
-3. Attach EC2 Role to Cloud9:
+7. Name the role "eksworkshop-admin" and select "Create role":
+
+    ![role-11](./images/role-11.png)
+
+8. Attach EC2 Role to Cloud9:
 
     Click Manage EC2 Instance in Cloud9 ![role-3](./images/role-3.png)
 
@@ -78,4 +82,4 @@ This lab prepares your workspace to interact with AWS EKS by installing the requ
 
     Attach EKS-Workshop IAM Role to Instance ![role-5](./images/role-5.png)
 
-4. Return to Cloud9 Workspace in the AWS Console.
+9. Return to Cloud9 Workspace in the AWS Console.
