@@ -2,7 +2,7 @@
 
 This lab prepares your Cloud9 Development Environment to interact with AWS EKS by configuring and installing the required utilities. 
 
-## Attach EC2 Role to Cloud9 Workspace
+## Build Cloud9 Development Enviornment
 
 1. Browse and launch Cloud9: 
 
@@ -23,6 +23,8 @@ This lab prepares your Cloud9 Development Environment to interact with AWS EKS b
 5. Select “Create environment”: 
 
     ![role-16](./images/role-16.png)
+
+## Create and Configure EC2 Role
 
 1. Disable Cloud9 Temporary Credentials: 
 
