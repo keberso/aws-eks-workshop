@@ -56,10 +56,16 @@ This lab prepares your Cloud9 Development Environment to interact with AWS EKS b
 
 8. Attach EC2 Role to Cloud9:
 
-    Click Manage EC2 Instance in Cloud9 ![role-3](./images/role-3.png)
+9. Click Manage EC2 Instance in Cloud9:
 
-    Click Actions -> Security -> Modify IAM Role ![role-4](./images/role-4.png)
+     ![role-3](./images/role-3.png)
 
-    Attach the eksworkshop-admin role created previously to the instance and select "Save" ![role-5](./images/role-5.png)
+10. Click Actions -> Security -> Modify IAM Role:
 
-9. Return to Cloud9 Workspace in the AWS Console.
+     ![role-4](./images/role-4.png)
+
+11. Attach the eksworkshop-admin role created previously to the instance and select "Save":
+
+ ![role-5](./images/role-5.png)
+
+12. Return to Cloud9 Workspace in the AWS Console.
