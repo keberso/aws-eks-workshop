@@ -54,7 +54,7 @@ This lab prepares your Cloud9 Development Environment to interact with AWS EKS b
 
     ![role-11](./images/role-11.png)
 
-8. Return to Cloud9 Workspace in the AWS Console.
+8. Return to Cloud9 Workspace.
 
 9. Click Manage EC2 Instance in Cloud9:
 
@@ -68,4 +68,4 @@ This lab prepares your Cloud9 Development Environment to interact with AWS EKS b
 
  ![role-5](./images/role-5.png)
 
-12. Return to Cloud9 Workspace in the AWS Console.
+12. Return to Cloud9 Workspace.
