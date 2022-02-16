@@ -1,4 +1,4 @@
-#!/bin/bash
+#! /bin/bash
 
 echo "Setup SSH Key ..." && sleep 1
 ssh-keygen -t rsa -N "" -f ~/.ssh/id_rsa
