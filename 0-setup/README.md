@@ -4,7 +4,9 @@ This lab prepares your Cloud9 Development Environment to interact with AWS EKS b
 
 ## Attach EC2 Role to Cloud9 Workspace
 
-1. Disable Cloud9 Temporary Credentials: ![role-1](./images/role-1.png)
+1. Disable Cloud9 Temporary Credentials: 
+
+![role-1](./images/role-1.png)
 
 2. Navigate to IAM:
 
