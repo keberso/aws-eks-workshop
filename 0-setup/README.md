@@ -1,6 +1,6 @@
 # Project Setup - Lab 0
 
-This lab prepares your Cloud9 Developent Environment to interact with AWS EKS by configurating and installing the required utilities. 
+This lab prepares your Cloud9 Development Environment to interact with AWS EKS by configuraing and installing the required utilities. 
 
 ## Attach EC2 Role to Cloud9 Workspace
 
