@@ -80,6 +80,6 @@ This lab prepares your workspace to interact with AWS EKS by installing the requ
 
     Click Actions -> Security -> Modify IAM Role ![role-4](./images/role-4.png)
 
-    Attach tje eksworkshop-admin role created previously to the instance and select "Save" ![role-5](./images/role-5.png)
+    Attach the eksworkshop-admin role created previously to the instance and select "Save" ![role-5](./images/role-5.png)
 
 9. Return to Cloud9 Workspace in the AWS Console.
