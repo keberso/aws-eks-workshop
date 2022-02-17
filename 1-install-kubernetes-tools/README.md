@@ -7,9 +7,7 @@ This lab installs the tools into your development environment required for the r
     ```bash
     sudo curl --silent --location -o /usr/local/bin/kubectl \
       https://amazon-eks.s3.us-west-2.amazonaws.com/1.19.6/2021-01-05/bin/linux/amd64/kubectl
-
     sudo chmod +x /usr/local/bin/kubectl
-
     ```
 
 2. Execute the following commands in the above working directory. Skip to Step 3 if you want to automate instead:
