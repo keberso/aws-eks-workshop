@@ -1,5 +1,13 @@
 # Building your First EKS Cluster! - Lab 2
 
+## Clone the service repos
+   
+    ```bash
+    cd ~/environment
+    git clone https://github.com/aws-containers/ecsdemo-frontend.git
+    git clone https://github.com/aws-containers/ecsdemo-nodejs.git
+    git clone https://github.com/aws-containers/ecsdemo-crystal.git
+    ```
 ## Install and verify the eksctl bianaries
 
 1. Download and install the eksctl binary:
