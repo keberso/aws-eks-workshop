@@ -60,6 +60,12 @@ This lab installs the tools into your development environment required for the r
 8. To ensure temporary credentials aren’t already in place we will remove any existing credentials files abd disable AWS managed temporary credentials:
 
     ```bash
-    aws cloud9 update-environment  --environment-id $C9_PID --managed-credentials-action DISABLE
     rm -vf ${HOME}/.aws/credentials
+    ```
+  8. Configure the aws cli with our current region as defaul:
+
+    ```bash
+    export ACCOUNT_ID=$(aws sts get-caller-identity --output text --query Account)
+    export AWS_REGION=$(curl -s 169.254.169.254/latest/dynamic/instance-identity/document | jq -r '.region')
+    export AZS=($(aws ec2 describe-availability-zones --query 'AvailabilityZones[].ZoneName' --output text --region $AWS_REGION))
     ```
