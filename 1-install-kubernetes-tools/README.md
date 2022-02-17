@@ -2,10 +2,14 @@
 
 This lab installs the tools into your development environment required for the remaining labs. 
 
-1. Verify you're in the correct working directory of Lab 1:
+1. Install kubectl
 
-    ```text
-    cd aws-eks-workshop/1-launching-eks-cluster/
+    ```bash
+    sudo curl --silent --location -o /usr/local/bin/kubectl \
+      https://amazon-eks.s3.us-west-2.amazonaws.com/1.19.6/2021-01-05/bin/linux/amd64/kubectl
+
+    sudo chmod +x /usr/local/bin/kubectl
+
     ```
 
 2. Execute the following commands in the above working directory. Skip to Step 3 if you want to automate instead:
