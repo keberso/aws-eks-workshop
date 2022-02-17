@@ -57,3 +57,9 @@ This lab installs the tools into your development environment required for the r
     echo 'export LBC_VERSION="v2.3.0"' >>  ~/.bash_profile
     .  ~/.bash_profile
     ```
+8. To ensure temporary credentials aren’t already in place we will remove any existing credentials files abd disable AWS managed temporary credentials:
+
+    ```bash
+    aws cloud9 update-environment  --environment-id $C9_PID --managed-credentials-action DISABLE
+    rm -vf ${HOME}/.aws/credentials
+    ```
