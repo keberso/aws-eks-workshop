@@ -1,6 +1,6 @@
 # AWS Elastic Kubernetes Service (EKS) Workshop
 
-## [Building your Development Environment - Lab 0](./0-setup)
+## [Building your Development Environment - Lab 0](./0-build-your-development-environment)
 
 In this lab we will build your development envivronment using AWS Cloud9, a cloud-based integrated development environment (IDE) that lets you write, run and debug your code with just a browser.
 
@@ -11,3 +11,7 @@ In this lab, we will install Kubernetes tools into your Cloud9 Development Envio
 ## [Building your First EKS Cluster - Lab 2](./2-build-eks-cluster-eksctl)
 
 eksctl is a tool jointly devloped by AWS and Weaveworks that automates much of the experience of creating EKS Clusters. In this module, we will use eksctl to launch and configure your EKS cluster and nodes.
+
+## [Deploy the Kubernetes Dashboard - Lab 3](./3-deploy-kubernetes-dashboard)
+
+In this Lab, we will deploy the official Kubernetes dashboard, and connect through our Cloud9 Workspace.
