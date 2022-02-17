@@ -2,7 +2,7 @@
 
 ## Clone the service repos
    
-    ```bash
+    ```text
     cd ~/environment
     git clone https://github.com/aws-containers/ecsdemo-frontend.git
     git clone https://github.com/aws-containers/ecsdemo-nodejs.git
