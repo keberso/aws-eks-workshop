@@ -34,4 +34,13 @@ This lab installs the tools into your development environment required for the r
       docker run --rm -i -v "${PWD}":/workdir mikefarah/yq "$@"
     }' | tee -a ~/.bashrc && source ~/.bashrc
     ```
-    YQ is a lightweight and portable command-line YAML, JSON and XML processor. yq uses jq like syntax but works with yaml files as well as json and xml.
+    Yq is a lightweight and portable command-line YAML, JSON and XML processor. yq uses jq like syntax but works with yaml files as well as json and xml.
+
+5. Verify the binaries are in the path and executable
+
+    ```bash
+    for command in kubectl jq envsubst aws
+    do
+      which $command &>/dev/null && echo "$command in path" || echo "$command NOT FOUND"
+    done
+    ```
