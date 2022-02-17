@@ -26,3 +26,12 @@ This lab installs the tools into your development environment required for the r
     sudo yum -y install jq gettext bash-completion moreutils
     ```
     Jq is a Linux command line utility that allows you to extract data from JSON documents. Bash completion is a functionality through which bash helps users type their commands faster and easier and more utils is a collection of useful utilities.
+
+4. Install yq for yaml processing
+
+    ```bash
+    echo 'yq() {
+      docker run --rm -i -v "${PWD}":/workdir mikefarah/yq "$@"
+    }' | tee -a ~/.bashrc && source ~/.bashrc
+    ```
+    YQ is a lightweight and portable command-line YAML, JSON and XML processor. yq uses jq like syntax but works with yaml files as well as json and xml.
