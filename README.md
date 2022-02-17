@@ -8,13 +8,9 @@ Build your Cloud9 Development Environment.
 
 Install Kubernetes tools into your Cloud9 Development Enviornment.
 
-## [Preparing EKS Cluster for Applications - Lab 2](./2-preparing-eks-cluster )
+## [Building your First EKS Cluster! - Lab 2](./2-build-eks-cluster-eksctl)
 
-Execute the following:
-
-* Verify AWS Load Balancer IAM roles for service account is configured
-* Deploy AWS Load Balancer Controller for external connectivity
-* Deploy official Kubernetes dashboard
+eksctl is a tool jointly devloped by AWS and Weaveworks that automates much of the experience of creating EKS Clusters. In this module, we will use eksctl to launch and configure your EKS cluster and nodes.
 
 ## [Containerize Tomcat Web Application - Lab 3](./3-containerize-web-application)
 
