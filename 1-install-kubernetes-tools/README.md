@@ -69,8 +69,13 @@ This lab installs the tools into your development environment required for the r
     export AWS_REGION=$(curl -s 169.254.169.254/latest/dynamic/instance-identity/document | jq -r '.region')
     export AZS=($(aws ec2 describe-availability-zones --query 'AvailabilityZones[].ZoneName' --output text --region $AWS_REGION))
     ```
-10. Validate that AWS_REGION is set to the US-EAST-1 region:
+10. Validate that AWS_REGION is set to the us-east-1 region:
 
     ```bash
     test -n "$AWS_REGION" && echo AWS_REGION is "$AWS_REGION" || echo AWS_REGION is not set
+    ```
+10. Validate that the your Cloud9 Developer Environment is using the correct IAM Role (ecksworshop-admin):
+
+    ```bash
+    aws sts get-caller-identity --query Arn | grep eksworkshop-admin -q && echo "IAM role valid" || echo "IAM role NOT valid"
     ```
