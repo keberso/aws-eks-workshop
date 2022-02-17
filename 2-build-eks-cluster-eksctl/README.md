@@ -1,8 +1,8 @@
 # Building your First EKS Cluster! - Lab 2
 
 ## Clone the service repos
-   
-    ```text
+
+    ```bash
     cd ~/environment
     git clone https://github.com/aws-containers/ecsdemo-frontend.git
     git clone https://github.com/aws-containers/ecsdemo-nodejs.git
