@@ -62,7 +62,7 @@ This lab installs the tools into your development environment required for the r
     ```bash
     rm -vf ${HOME}/.aws/credentials
     ```
-  8. Configure the aws cli with our current region as defaul:
+9. Configure the aws cli with our current region as defaul:
 
     ```bash
     export ACCOUNT_ID=$(aws sts get-caller-identity --output text --query Account)
