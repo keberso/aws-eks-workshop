@@ -4,8 +4,6 @@ This lab installs the tools into your development environment required for the r
 
 1. Install kubectl
 
-What is kubectl? The Kubernetes command-line tool, kubectl, allows you to run commands against Kubernetes clusters. You can use kubectl to deploy applications, inspect and manage cluster resources, and view logs. ... kubectl is installable on a variety of Linux platforms, macOS and Windows.
-
     ```bash
     sudo curl --silent --location -o /usr/local/bin/kubectl \
       https://amazon-eks.s3.us-west-2.amazonaws.com/1.19.6/2021-01-05/bin/linux/amd64/kubectl
