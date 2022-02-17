@@ -74,8 +74,15 @@ This lab installs the tools into your development environment required for the r
     ```bash
     test -n "$AWS_REGION" && echo AWS_REGION is "$AWS_REGION" || echo AWS_REGION is not set
     ```
-10. Validate that the your Cloud9 Developer Environment is using the correct IAM Role (ecksworshop-admin):
+10. Validate that the your Cloud9 Developer Environment is using the correct IAM Role (Should see IAM Role Valid):
 
     ```bash
     aws sts get-caller-identity --query Arn | grep eksworkshop-admin -q && echo "IAM role valid" || echo "IAM role NOT valid"
+    ```
+10. Creat an AWS KMS Customer Managed Key (CMK) to use when encrypting Kubernetes secrets:
+
+    ```bash
+    aws kms create-alias --alias-name alias/eksworkshop --target-key-id $(aws kms create-key --query KeyMetadata.Arn --output text)
+    export MASTER_ARN=$(aws kms describe-key --key-id alias/eksworkshop --query KeyMetadata.Arn --output text)
+    echo "export MASTER_ARN=${MASTER_ARN}" | tee -a ~/.bash_profile
     ```
