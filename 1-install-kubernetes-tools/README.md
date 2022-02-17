@@ -2,8 +2,6 @@
 
 This lab installs the tools into your development environment required for the remaining labs. 
 
-## Preparation
-
 1. Verify you're in the correct working directory of Lab 1:
 
     ```text
