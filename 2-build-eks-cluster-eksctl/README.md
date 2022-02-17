@@ -3,10 +3,7 @@
 ## Clone the service repos
 
     ```bash
-    cd ~/environment
-    git clone https://github.com/aws-containers/ecsdemo-frontend.git
-    git clone https://github.com/aws-containers/ecsdemo-nodejs.git
-    git clone https://github.com/aws-containers/ecsdemo-crystal.git
+    eksctl version
     ```
 ## Install and verify the eksctl bianaries
 
