@@ -1,12 +1,12 @@
 # AWS Elastic Kubernetes Service (EKS) Workshop
 
-## [Project Setup - Lab 0](./0-setup)
+## [Building our Development Environment - Lab 0](./0-setup)
 
-Build your Cloud9 Development Environment.
+In this lab we will build your development envivronment using AWS Cloud9, a cloud-based integrated development environment (IDE) that lest you write, run and defug your code with just a browser.
 
 ## [Install Kubernetes Tools - Lab 1](./1-install-kubernetes-tools)
 
-Install Kubernetes tools into your Cloud9 Development Enviornment.
+Install Kubernetes tools into your Cloud9 Development Enviornment needed for the rest of the labs.
 
 ## [Building your First EKS Cluster! - Lab 2](./2-build-eks-cluster-eksctl)
 
