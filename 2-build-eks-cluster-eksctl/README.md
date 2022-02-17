@@ -65,3 +65,8 @@
     keyARN: ${MASTER_ARN}
     EOF
     ```
+3. Use the file you created previously as input to create your first EKS cluster
+
+    ```bash
+    eksctl create cluster -f eksworkshop.yaml
+    ```
