@@ -1,6 +1,6 @@
-# Launching an EKS Cluster - Lab 1
+# Install Kubernetes Tools - Lab 1
 
-This lab prepares environment for deploying an EKS Cluster leveraging [eksctl](https://eksctl.io/).
+This lab installs the tools into your development environment required for the remaining labs. 
 
 ## Preparation
 
