@@ -2,7 +2,7 @@
 
 ## [Building our Development Environment - Lab 0](./0-setup)
 
-In this lab we will build your development envivronment using AWS Cloud9, a cloud-based integrated development environment (IDE) that lest you write, run and defug your code with just a browser.
+In this lab we will build your development envivronment using AWS Cloud9, a cloud-based integrated development environment (IDE) that lets you write, run and debug your code with just a browser.
 
 ## [Install Kubernetes Tools - Lab 1](./1-install-kubernetes-tools)
 
