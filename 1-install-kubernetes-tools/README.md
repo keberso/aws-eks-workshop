@@ -62,10 +62,15 @@ This lab installs the tools into your development environment required for the r
     ```bash
     rm -vf ${HOME}/.aws/credentials
     ```
-9. Configure the aws cli with our current region as defaul:
+9. Configure the aws cli with our current region as default:
 
     ```bash
     export ACCOUNT_ID=$(aws sts get-caller-identity --output text --query Account)
     export AWS_REGION=$(curl -s 169.254.169.254/latest/dynamic/instance-identity/document | jq -r '.region')
     export AZS=($(aws ec2 describe-availability-zones --query 'AvailabilityZones[].ZoneName' --output text --region $AWS_REGION))
+    ```
+10. Validate that AWS_REGION is set to the US-EAST-1 region:
+
+    ```bash
+    test -n "$AWS_REGION" && echo AWS_REGION is "$AWS_REGION" || echo AWS_REGION is not set
     ```
