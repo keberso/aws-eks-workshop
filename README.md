@@ -6,7 +6,7 @@ In this lab we will build your development envivronment using AWS Cloud9, a clou
 
 ## [Install Kubernetes Tools - Lab 1](./1-install-kubernetes-tools)
 
-Install Kubernetes tools into your Cloud9 Development Enviornment needed for the rest of the labs.
+In this lab, we will install Kubernetes tools into your Cloud9 Development Enviornment needed for the rest of the labs.
 
 ## [Building your First EKS Cluster! - Lab 2](./2-build-eks-cluster-eksctl)
 
