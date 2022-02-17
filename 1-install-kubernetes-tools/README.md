@@ -20,20 +20,9 @@ This lab installs the tools into your development environment required for the r
     ```
     The AWS Command Line Interface (CLI) is a unified tool to manage your AWS services. With just one tool to download and configure, you can control multiple AWS services from the command line and automate them through scripts.
 
-3. (Optional) Execute the [launch-setup.sh](./launch-setup.sh) script in your workspace only if you don't want to manually type the commands above:
+3. Install jq, envsubst (from GNU gettext utilities) and bash-completion
 
     ```bash
-    chmod +x ./launch-setup.sh
+    sudo yum -y install jq gettext bash-completion moreutils
     ```
-
-    ```bash
-    ./launch-setup.sh
-    ```
-
-    ```bash
-    eksctl create cluster -f airports.yaml
-    ```
-
-    ```bash
-    kubectl get nodes
-    ```
+    Jq is a Linux command line utility that allows you to extract data from JSON documents. Bash completion is a functionality through which bash helps users type their commands faster and easier and more utils is a collection of useful utilities.
