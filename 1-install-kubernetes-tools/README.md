@@ -44,3 +44,16 @@ This lab installs the tools into your development environment required for the r
       which $command &>/dev/null && echo "$command in path" || echo "$command NOT FOUND"
     done
     ```
+6. Enable kubectl bash_completion
+
+    ```bash
+    kubectl completion bash >>  ~/.bash_completion
+    . /etc/profile.d/bash_completion.sh
+    . ~/.bash_completion
+    ```
+7. Set the AWS Load Balancer Controller version
+
+    ```bash
+    echo 'export LBC_VERSION="v2.3.0"' >>  ~/.bash_profile
+    .  ~/.bash_profile
+    ```
