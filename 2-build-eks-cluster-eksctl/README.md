@@ -43,18 +43,18 @@
     kind: ClusterConfig
 
     metadata:
-    name: eksworkshop-eksctl
-    region: ${AWS_REGION}
-    version: "1.19"
+        name: eksworkshop-eksctl
+        region: ${AWS_REGION}
+        version: "1.19"
 
     availabilityZones: ["${AZS[0]}", "${AZS[1]}", "${AZS[2]}"]
 
     managedNodeGroups:
     - name: nodegroup
-    desiredCapacity: 3
-    instanceType: t3.small
-    ssh:
-        enableSsm: true
+        desiredCapacity: 3
+        instanceType: t3.small
+        ssh:
+            enableSsm: true
 
     # To enable all of the control plane logs, uncomment below:
     # cloudWatch:
@@ -62,7 +62,7 @@
     #    enableTypes: ["*"]
 
     secretsEncryption:
-    keyARN: ${MASTER_ARN}
+        keyARN: ${MASTER_ARN}
     EOF
     ```
 3. Use the file you created previously as input to create your first EKS cluster
