@@ -70,3 +70,8 @@
     ```bash
     eksctl create cluster -f eksworkshop.yaml
     ```
+4. Confirm your Worker Nodes were created
+
+    ```bash
+    kubectl get nodes # if we see our 3 nodes, we know we have authenticated correctly
+    ```
