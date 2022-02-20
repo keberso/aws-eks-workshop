@@ -12,6 +12,8 @@ In this lab, we will install Kubernetes tools into your Cloud9 Development Envio
 
 eksctl is a tool jointly devloped by AWS and Weaveworks that automates much of the experience of creating EKS Clusters. In this module, we will use eksctl to launch and configure your EKS cluster and nodes.
 
-## [Deploy the Kubernetes Dashboard - Lab 3](./3-deploy-kubernetes-dashboard)
+## [Update Console Credentials - Lab 3 (Optional)](./3-update-console-credentials)
 
-In this Lab, we will deploy the official Kubernetes dashboard, and connect through our Cloud9 Workspace.
+This setp is optional, as nearly all of the workshop content is CLI-drive. However, if you'd like full access to your workshop cluster int he EKS console, this step is recomended.
+
+The EKS console allows you to see not only the configuration aspects of your cluster, but also to view Kubernetes cluster objects such as Deployments, Pods, and Nodes. For this type of access, the console IAM User or Role needs to be granted permission within the cluster.
