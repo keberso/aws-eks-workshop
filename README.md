@@ -19,3 +19,7 @@ This lab provides full access to your workshop cluster in the EKS console.
 ## [Deploy the Kubernetes Dashboard - Lab 4](./4-deploy-kubernetes-dashboard)
 
 In this lab, we will deploy the official Kubernetes dashboard and connect through our Cloud9 Workspace.
+
+## [Deploy Sample Microservices - Lab 5](./5-deploy-sample-microservices)
+
+In this lab, we will deploy the official Kubernetes dashboard and connect through our Cloud9 Workspace.
