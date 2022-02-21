@@ -76,4 +76,14 @@ These metrics will drive the scaling behavior of the deployments.
     Sample Output:
     ![role-1](./images/role-1.png)
 
-## Scale an Application with the HorizontalPodAutoscaler (HPA)
+## Deploy a Sample App
+
+We will deploy an application and expose as a service on TCP port 80.
+
+The application is a custom-built image based on the php-apache image. The index.php page performs calculations to generate CPU load. More information [can be found here](https://kubernetes.io/docs/tasks/run-application/horizontal-pod-autoscale-walkthrough/#run-expose-php-apache-server)
+
+1. The following command will deploy the kubernetes metrics server using kubectl:
+
+    ```bash
+    kubectl apply -f https://github.com/kubernetes-sigs/metrics-server/releases/download/v0.5.0/components.yaml
+    ```
