@@ -28,3 +28,6 @@ The official Kubernetes dashboard is not deployed by default, but there are inst
     ```bash
     /api/v1/namespaces/kubernetes-dashboard/services/https:kubernetes-dashboard:/proxy/
     ```
+3. The Cloud9 Preview browser doesn’t support the token authentication, so once you have the login screen in the cloud9 preview browser tab, press the Pop Out button to open the login screen in a regular browser tab, as shown below:
+
+    ![role-2](./images/role-2.png)
