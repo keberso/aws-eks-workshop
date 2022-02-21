@@ -1,4 +1,4 @@
-# Autoscaling Applications - Lab 6
+# Autoscaling Clusters - Lab 7
 
 Before starting to learn about the various auto-scaling options for your EKS cluster we are going to install Kube-ops-view from Henning Jacobs.
 
