@@ -58,24 +58,35 @@ Compare this to kubernetes/service.yaml for one of our backend services:
 Notice there is no specific service type described. When we check the [Kubernetes documentation](https://kubernetes.io/docs/concepts/services-networking/service/#publishing-services-service-types
 ): we find that the default type is ClusterIP. This Exposes the service on a cluster-internal IP. Choosing this value makes the service only reachable from within the cluster.
 
-#Lets deploy the front end service:
+Lets deploy the front end service.....
 
-1. Change directories to where our deployment and service definitions for the NodeJS application and service are located:
+1. Ensure the ELB serice role exists. We can check for the role and create it if it is missing with the command below:
 
     ```bash
-    cd ~/environment/ecsdemo-crystal
+    aws iam get-role --role-name "AWSServiceRoleForElasticLoadBalancing" || aws iam create-service-linked-role --aws-service-name "elasticloadbalancing.amazonaws.com"
     ```
 
-2. Run the following commands to deploy the Crystal service:
+2. Change directories to where our deployment and service definitions for the front end application and service are located:
+
+    ```bash
+    cd ~/environment/ecsdemo-frontend
+    ```
+3. Run the following commands to deploy the Ruby front end:
 
     ```bash
     kubectl apply -f kubernetes/deployment.yaml
     kubectl apply -f kubernetes/service.yaml
     ```
-3. Run the following commands to see the deployment status:
+4. Run the following commands to see the deployment status:
 
     ```bash
-    kubectl get deployment ecsdemo-crystal
+    kubectl get deployment ecsdemo-frontend
     ```
+## Find the Service Address
+
+
+
+
+
 ## Contgratulations!
    You have deployed the Kubernetes Dashboard! 
