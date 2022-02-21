@@ -103,5 +103,26 @@ Lets deploy the front end service.....
 
 ![role-4](./images/role-4.png)
 
+## Scale the Back End Application
+
+1. When we launched our services, we only launched one container of each. We can confirm this by viewing the running pods:
+
+    ```bash
+    kubectl get deployments
+    ```
+2. Scale up the backend services:
+
+    ```bash
+    kubectl scale deployment ecsdemo-nodejs --replicas=3
+    kubectl scale deployment ecsdemo-crystal --replicas=3
+    ```
+3. Confirm by looking at deployments again:
+
+    ```bash
+    kubectl get deployments
+    ```
+
+    Note: Also, check the browser tab where we can see our application running. You should now see traffic flowing to multiple backend services.
+
 ## Contgratulations!
    You have created and scaled your first Kubernetes service! 
