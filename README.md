@@ -23,3 +23,7 @@ In this lab, we will deploy the official Kubernetes dashboard and connect throug
 ## [Deploy Sample Microservices - Lab 5](./5-deploy-sample-microservices)
 
 In this lab, we will deploy one front end application written in Ruby and two backend applications, one written in NodeJS and one written in Crystal.
+
+## [Autoscaling our Applications and Clusters - Lab 6](./6-autoscaling-applications-clusters)
+
+In this lab, we will show patterns for scaling your worker nodes and application deployments automatically.
