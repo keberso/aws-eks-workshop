@@ -73,5 +73,8 @@ These metrics will drive the scaling behavior of the deployments.
     ```bash
     kubectl get apiservice v1beta1.metrics.k8s.io -o json | jq '.status'
     ```
+    Sample Output:
+    ![role-1](./images/role-1.png)
+
 ## Contgratulations!
    You have created and scaled your first Kubernetes service! 
