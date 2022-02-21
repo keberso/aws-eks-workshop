@@ -43,6 +43,39 @@ Remember from our earlier discussion, that a deployment declares what our applic
     ```bash
     kubectl get deployment ecsdemo-crystal
     ```
+## Deploy Frontend Service
 
+Before we bring up the frontend service, let’s take a look at the service types we are using: This is kubernetes/service.yaml for our frontend service:
+
+![role-2](./images/role-2.png)
+
+Notice type: LoadBalancer: This will configure an ELB to handle incoming traffic to this service.
+
+Compare this to kubernetes/service.yaml for one of our backend services:
+
+![role-3](./images/role-3.png)
+
+Notice there is no specific service type described. When we check the [Kubernetes documentation](https://kubernetes.io/docs/concepts/services-networking/service/#publishing-services-service-types
+): we find that the default type is ClusterIP. This Exposes the service on a cluster-internal IP. Choosing this value makes the service only reachable from within the cluster.
+
+
+
+1. Change directories to where our deployment and service definitions for the NodeJS application and service are located:
+
+    ```bash
+    cd ~/environment/ecsdemo-crystal
+    ```
+
+2. Run the following commands to deploy the Crystal service:
+
+    ```bash
+    kubectl apply -f kubernetes/deployment.yaml
+    kubectl apply -f kubernetes/service.yaml
+    ```
+3. Run the following commands to see the deployment status:
+
+    ```bash
+    kubectl get deployment ecsdemo-crystal
+    ```
 ## Contgratulations!
    You have deployed the Kubernetes Dashboard! 
