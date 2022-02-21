@@ -31,3 +31,18 @@ The official Kubernetes dashboard is not deployed by default, but there are inst
 3. The Cloud9 Preview browser doesn’t support the token authentication, so once you have the login screen in the cloud9 preview browser tab, press the Pop Out button to open the login screen in a regular browser tab, as shown below:
 
     ![role-2](./images/role-2.png)
+
+4. Open a New Terminal Tab and enter:
+
+    ```bash
+    aws eks get-token --cluster-name eksworkshop-eksctl | jq -r '.status.token'
+    ```
+
+5. Copy the output of this command and then click the radio button next to Token. In the text field below paste the output from the last command.
+
+    ![role-3](./images/role-3.png)
+
+5. Select "SIGN IN"
+
+## Contgratulations!
+   You have deployed the Kubernetes Dashboard! 
