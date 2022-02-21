@@ -76,5 +76,4 @@ These metrics will drive the scaling behavior of the deployments.
     Sample Output:
     ![role-1](./images/role-1.png)
 
-## Contgratulations!
-   You have created and scaled your first Kubernetes service! 
+## Scale an Application with the HorizontalPodAutoscaler (HPA)
