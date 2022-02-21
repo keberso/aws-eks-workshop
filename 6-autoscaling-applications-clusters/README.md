@@ -1,10 +1,12 @@
 # Autoscaling Applications and Clusters - Lab 6
 
-In this file, we are defining our deployment. Remember earlier today, we said that Kubernetes is declarative. In this deployment file, we declare what we want to deploy. We then write this definition to the Kubernetes api using kubectl and Kubernetes works to both get and keep us in the state which we define. 
+In this lab, we will demonstrate patterns for scaling your worker nodes and applications deployments automatically.
 
-![role-1](./images/role-1.png)
+Automatic scaling in K8s comes in two forms:
 
-Remember from our earlier discussion, that a deployment declares what our application should look like and a service declares how other things in the cluster gain access to the application.
+Horizontal Pod Autoscaler (HPA) scales the pods in a deployment or replica set. It is implemented as a K8s API resource and a controller. The controller manager queries the resource utilization against the metrics specified in each HorizontalPodAutoscaler definition. It obtains the metrics from either the resource metrics API (for per-pod resource metrics), or the custom metrics API (for all other metrics).
+
+Cluster Autoscaler (CA) a component that automatically adjusts the size of a Kubernetes Cluster so that all pods have a place to run and there are no unneeded nodes.
 
 ## Deploy the NodeJS Backend API/Application
 
