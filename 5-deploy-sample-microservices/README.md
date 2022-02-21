@@ -101,6 +101,7 @@ Lets deploy the front end service.....
 
 3. Use the url outputed from step 2 and paste it into your browser.
 
+![role-4](./images/role-4.png)
 
 ## Contgratulations!
    You have created and scaled your first Kubernetes service! 
