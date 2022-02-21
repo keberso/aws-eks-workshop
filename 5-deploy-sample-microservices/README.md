@@ -95,7 +95,7 @@ Lets deploy the front end service.....
     ELB=$(kubectl get service ecsdemo-frontend -o json | jq -r '.status.loadBalancer.ingress[].hostname')
     curl -m3 -v $ELB
     ```
-Note: It will take several minutes for the ELB to become healthy and start passing traffic to the frontend pods.
+    Note: It will take several minutes for the ELB to become healthy and start passing traffic to the frontend pods.
 
 3. Use the url outputed from step 2 and paste it into your browser.
 
