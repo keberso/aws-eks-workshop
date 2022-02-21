@@ -19,7 +19,7 @@ You’ll need to determine the correct credential to add for your AWS Console ac
     ```bash
     eksctl create iamidentitymapping --cluster eksworkshop-eksctl --arn ${rolearn} --group system:masters --username admin
     ```
-Note: The ARN of an IAM role can't include the path. The format of the value you provide must be arn:aws:iam::111122223333:role/role-name
+    Note: The ARN of an IAM role can't include the path. The format of the value you provide must be arn:aws:iam::111122223333:role/role-name
 
 2. Verify your entry in the AWS auth map
 
