@@ -124,5 +124,20 @@ Lets deploy the front end service.....
 
     Note: Also, check the browser tab where we can see our application running. You should now see traffic flowing to multiple backend services.
 
+## Scale the Front End Application
+
+1. Scale up the front end services:
+
+    ```bash
+    kubectl scale deployment ecsdemo-frontend --replicas=3
+    ```
+2. Confirm by looking at deployments again:
+
+    ```bash
+    kubectl get deployments
+    ```
+
+    Note: Also, check the browser tab where we can see our application running. You should now see traffic flowing to multiple backend services.
+
 ## Contgratulations!
    You have created and scaled your first Kubernetes service! 
