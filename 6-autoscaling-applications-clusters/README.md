@@ -57,5 +57,22 @@ We will use Helm for the deployment. Helm is a package manager for Kubernetes th
     ```
     Note: As this workshop moves along and you perform scale up and down actions, you can check the effects and changes in the cluster using kube-ops-view. Check out the different components and see how they map to the concepts that we have already covered during this workshop.
 
+## Deploy Kubernetes Metrics Server
+
+    Note: Metrics Server is a scalable, efficient source of container resource metrics for Kubernetes built-in autoscaling pipelines.
+
+    
+    These metrics will drive the scaling behavior of the deployments.
+
+1. The following command will deploy the kubernetes metrics server using kubectl:
+
+    ```bash
+    kubectl apply -f https://github.com/kubernetes-sigs/metrics-server/releases/download/v0.5.0/components.yaml
+    ```
+2. Run the following command to verify the status of the metrics-server APIService (It could take a few minutes):
+
+    ```bash
+    kubectl get apiservice v1beta1.metrics.k8s.io -o json | jq '.status'
+    ```
 ## Contgratulations!
    You have created and scaled your first Kubernetes service! 
