@@ -6,6 +6,27 @@ Kube-ops-view provides a common operational picture for a Kubernetes cluster tha
 
 We will use Helm for the deployment. Helm is a package manager for Kubernetes that packages multiple Kubernetes resources into a single logical deployment unit called a Chart. Charts are easy to create, version, share, and publish.
 
+## Install Helm CLI
+
+1. Install Helm command line tools:
+
+    ```bash
+    curl -sSL https://raw.githubusercontent.com/helm/helm/master/scripts/get-helm-3 | bash
+    ```
+2. Verify the Helm version:
+
+    ```bash
+    helm version --short
+    ```
+3. Configure Bash completion for the helm command:
+
+    ```bash
+    helm completion bash >> ~/.bash_completion
+    . /etc/profile.d/bash_completion.sh
+    . ~/.bash_completion
+    source <(helm completion bash)
+    ```
+
 ## Install kube-ops-view 
 
 1. The following line updates the stable helm repository and then installs kube-ops-view using a LoadBalancer Service type and creating a RBAC (Resource Base Access Control) entry for the read-only service account to read nodes and pods information from the cluster:
