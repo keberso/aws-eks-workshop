@@ -2,25 +2,17 @@
 
 The official Kubernetes dashboard is not deployed by default, but there are instructions in the [official documentation](https://kubernetes.io/docs/tasks/access-application-cluster/web-ui-dashboard/):
 
-We can deploy the dashboard with the following command:
+## Deploy the Kubernetes dashboard
 
-## Import your EKS Console credentials to your new cluster
-
-IAM Users and Roles are bound to an EKS Kubernetes cluster via a ConfigMap named aws-auth. We can use eksctl to do this with one command.
-
-You’ll need to determine the correct credential to add for your AWS Console access. Ask your instructor to help you identify the user or role used for console access.
-
-1. Identify the ARN of the user or role that you are accessing the console with. If you need assistance, ask your instructor
-
-2. With your ARN in hand, you can issue the command to create the identity mapping within the cluster.
+1. Deploy the dashboard with the following command:
 
     ```bash
-    eksctl create iamidentitymapping --cluster eksworkshop-eksctl --arn ${rolearn} --group system:masters --username admin
+    export DASHBOARD_VERSION="v2.0.0"
+    kubectl apply -f https://raw.githubusercontent.com/kubernetes/dashboard/${DASHBOARD_VERSION}/aio/deploy/recommended.yaml
     ```
-    Note: The ARN of an IAM role can't include the path. The format of the value you provide must be arn:aws:iam::111122223333:role/role-name
-
-2. Verify your entry in the AWS auth map
+2. Since this is deployed to our private cluster, we need to access it  via a proxy. kube-proxy is available to proxy our requests to the dashboard service. In your workspace, run the following command:
 
     ```bash
-    kubectl describe configmap -n kube-system aws-auth
+    kubectl proxy --port=8080 --address=0.0.0.0 --disable-filter=true &
     ```
+    Note: This will start the proxy, listen on port 8080, listen on all interfaces, and will disable the filtering of non-localhost requests. This command will continue to run in the background of the current terminal’s session.
