@@ -24,7 +24,7 @@ In this lab, we will deploy the official Kubernetes dashboard and connect throug
 
 In this lab, we will deploy one front end application written in Ruby and two backend applications, one written in NodeJS and one written in Crystal.
 
-## [Autoscaling Applications - Lab 6](./6-autoscaling-applications-clusters)
+## [Autoscaling Applications - Lab 6](./6-autoscaling-applications)
 
 In this lab, we will show patterns for scaling your application deployments automatically.
 
