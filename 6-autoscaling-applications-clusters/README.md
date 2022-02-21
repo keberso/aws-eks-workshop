@@ -59,10 +59,9 @@ We will use Helm for the deployment. Helm is a package manager for Kubernetes th
 
 ## Deploy Kubernetes Metrics Server
 
-    Note: Metrics Server is a scalable, efficient source of container resource metrics for Kubernetes built-in autoscaling pipelines.
+Note: Metrics Server is a scalable, efficient source of container resource metrics for Kubernetes built-in autoscaling pipelines.
 
-    
-    These metrics will drive the scaling behavior of the deployments.
+These metrics will drive the scaling behavior of the deployments.
 
 1. The following command will deploy the kubernetes metrics server using kubectl:
 
