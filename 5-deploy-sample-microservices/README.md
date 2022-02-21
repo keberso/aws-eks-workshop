@@ -1,6 +1,8 @@
 # Deploy Sample Microservices - Lab 5
 
-The official Kubernetes dashboard is not deployed by default, but there are instructions in the [official documentation](https://kubernetes.io/docs/tasks/access-application-cluster/web-ui-dashboard/):
+In this file, we are defining our deployment. Remember earlier today, we said that Kubernetes is declarative. In this deployment file, we declare what we want to deploy. We then write this definition to the kubernetes api using kubectl and Kubernetes works to both get and keep us in the state which we define. 
+
+![role-1](./images/role-1.png)
 
 ## Deploy the Kubernetes dashboard
 

@@ -22,4 +22,4 @@ In this lab, we will deploy the official Kubernetes dashboard and connect throug
 
 ## [Deploy Sample Microservices - Lab 5](./5-deploy-sample-microservices)
 
-In this lab, we will deploy the official Kubernetes dashboard and connect through our Cloud9 Workspace.
+In this lab, we will deploy one front end application written in Ruby and two backend applications, one written in NodeJS and one written in Crystal.
