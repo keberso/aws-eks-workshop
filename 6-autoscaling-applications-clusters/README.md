@@ -94,3 +94,19 @@ The application is a custom-built image based on the php-apache image. The index
     ```bash
     kubectl get pod -l app=php-apache
     ```
+
+## Create a HPA Resource
+
+1. Run the commands below to create and HPA resource that sclaes up when CPU exceeds 50% of the allocated container resource:
+
+    ```bash
+    kubectl autoscale deployment php-apache `#The target average CPU utilization` \
+      --cpu-percent=50 \
+      --min=1 `#The lower limit for the number of pods that can be set by the autoscaler` \
+      --max=10 `#The upper limit for the number of pods that can be set by the autoscaler`
+    ```
+2. View the HPA using kubectl. You will see <unknown>/50% for 1-2 minutes and then you should be able to see 0%/50%:
+
+    ```bash
+    kubectl get hpa
+    ```
