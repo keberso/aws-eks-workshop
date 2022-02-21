@@ -16,3 +16,15 @@ The official Kubernetes dashboard is not deployed by default, but there are inst
     kubectl proxy --port=8080 --address=0.0.0.0 --disable-filter=true &
     ```
     Note: This will start the proxy, listen on port 8080, listen on all interfaces, and will disable the filtering of non-localhost requests. This command will continue to run in the background of the current terminal’s session.
+
+## Access the Kubernetes Dashboard
+
+1. In your Cloud9 environment, click Tools / Preview / Preview Running Application
+
+    ![role-1](./images/role-1.png)
+
+2. Scroll to the end of the URL and append:
+
+    ```bash
+    /api/v1/namespaces/kubernetes-dashboard/services/https:kubernetes-dashboard:/proxy/
+    ```
