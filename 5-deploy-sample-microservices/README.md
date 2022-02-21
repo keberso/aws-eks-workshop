@@ -84,9 +84,21 @@ Lets deploy the front end service.....
     ```
 ## Find the Service Address
 
+1. Now that we have a running service that is type: LoadBalancer, we need to find the ELB’s address. We can do this by using the get services operation of kubectl:
 
+    ```bash
+    kubectl get service ecsdemo-frontend -o wide
+    ```
+2. (Optional)f we wanted to use the data programatically, we can also output via json. This is an example of how we might be able to make use of json output:
 
+    ```bash
+    ELB=$(kubectl get service ecsdemo-frontend -o json | jq -r '.status.loadBalancer.ingress[].hostname')
+    curl -m3 -v $ELB
+    ```
+Note: It will take several minutes for the ELB to become healthy and start passing traffic to the frontend pods.
+
+3. Use the url outputed from step 2 and paste it into your browser.
 
 
 ## Contgratulations!
-   You have deployed the Kubernetes Dashboard! 
+   You have created and scaled your first Kubernetes service! 
