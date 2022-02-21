@@ -1,10 +1,8 @@
 # Deploy the Kubernetes Dashboard - Lab 4
 
-This step is optional, as nearly all of the workshop content is CLI-driven. But, if you’d like full access to your workshop cluster in the EKS console this step is recommended.
+The official Kubernetes dashboard is not deployed by default, but there are instructions in the [official documentation](https://kubernetes.io/docs/tasks/access-application-cluster/web-ui-dashboard/):
 
-The EKS console allows you to see not only the configuration aspects of your cluster, but also to view Kubernetes cluster objects such as Deployments, Pods, and Nodes. For this type of access, the console IAM User or Role needs to be granted permission within the cluster.
-
-By default, the credentials used to create the cluster are automatically granted these permissions. Following along in the workshop, you’ve created a cluster using temporary IAM credentials from within Cloud9. This means that you’ll need to add your AWS Console credentials to the cluster.
+We can deploy the dashboard with the following command:
 
 ## Import your EKS Console credentials to your new cluster
 
