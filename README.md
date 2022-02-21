@@ -15,3 +15,7 @@ eksctl is a tool jointly devloped by AWS and Weaveworks that automates much of t
 ## [Update Console Credentials - Lab 3](./3-update-console-credentials)
 
 This lab provides full access to your workshop cluster in the EKS console.
+
+## [Deploy the Kubernetes Dashboard - Lab 4](./4-deploy-kubernetes-dashboard)
+
+In this lab, we will deploy the official Kubernetes dashboard, and connect through our Cloud9 Workspace.
