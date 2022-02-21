@@ -82,8 +82,15 @@ We will deploy an application and expose as a service on TCP port 80.
 
 The application is a custom-built image based on the php-apache image. The index.php page performs calculations to generate CPU load. More information [can be found here](https://kubernetes.io/docs/tasks/run-application/horizontal-pod-autoscale-walkthrough/#run-expose-php-apache-server)
 
-1. The following command will deploy the kubernetes metrics server using kubectl:
+1. Deploy the custom application:
 
     ```bash
-    kubectl apply -f https://github.com/kubernetes-sigs/metrics-server/releases/download/v0.5.0/components.yaml
+    kubectl create deployment php-apache --image=us.gcr.io/k8s-artifacts-prod/hpa-example
+    kubectl set resources deploy php-apache --requests=cpu=200m
+    kubectl expose deploy php-apache --port 80
+    ```
+2. List the php-apache pod:
+
+    ```bash
+    kubectl get pod -l app=php-apache
     ```
