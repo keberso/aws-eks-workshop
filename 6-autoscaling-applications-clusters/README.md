@@ -18,7 +18,13 @@ We will use Helm for the deployment. Helm is a package manager for Kubernetes th
     ```bash
     helm version --short
     ```
-3. Configure Bash completion for the helm command:
+3. Download the stable respository:
+
+    ```bash
+    helm repo add stable https://charts.helm.sh/stable
+    ```
+
+4. Configure Bash completion for the helm command:
 
     ```bash
     helm completion bash >> ~/.bash_completion
