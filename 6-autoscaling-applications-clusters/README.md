@@ -110,3 +110,25 @@ The application is a custom-built image based on the php-apache image. The index
     ```bash
     kubectl get hpa
     ```
+## Generate Load to Trigger Scaling
+
+1. Run the following command in a new terminal to open the shell of a new container:
+
+    ```bash
+    kubectl --generator=run-pod/v1 run -i --tty load-generator --image=busybox /bin/sh
+    ```
+2. Execute a while loop to http://php-apache:
+
+    ```bash
+    while true; do wget -q -O - http://php-apache; done
+    ```    
+3. In the previous terminal, watch the HPA with the fllowing command:
+
+    ```bash
+    kubectl get hpa -w
+    ```   
+    Note: You will see HPA scale the pods from 1 up to our configured maximum (10) until the CPU average is below our target (50%)
+
+    ![role-2](./images/role-2.png)
+
+    Note: You can now stop (Ctrl + C) the load test that was running in the other terminal. You will notice that the HPA will slowly bring the replica count to the minimum number based on its configuration. 
