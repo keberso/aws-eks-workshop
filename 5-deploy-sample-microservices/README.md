@@ -58,7 +58,7 @@ Compare this to kubernetes/service.yaml for one of our backend services:
 Notice there is no specific service type described. When we check the [Kubernetes documentation](https://kubernetes.io/docs/concepts/services-networking/service/#publishing-services-service-types
 ): we find that the default type is ClusterIP. This Exposes the service on a cluster-internal IP. Choosing this value makes the service only reachable from within the cluster.
 
-
+#Lets deploy the front end service:
 
 1. Change directories to where our deployment and service definitions for the NodeJS application and service are located:
 
