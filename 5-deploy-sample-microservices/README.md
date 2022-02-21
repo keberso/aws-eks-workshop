@@ -45,7 +45,9 @@ Remember from our earlier discussion, that a deployment declares what our applic
     ```
 ## Deploy Frontend Service
 
-Before we bring up the frontend service, let’s take a look at the service types we are using: This is kubernetes/service.yaml for our frontend service:
+Before we bring up the frontend service, let’s take a look at the service types we are using. 
+
+This is kubernetes/service.yaml for our frontend service:
 
 ![role-2](./images/role-2.png)
 
@@ -56,7 +58,7 @@ Compare this to kubernetes/service.yaml for one of our backend services:
 ![role-3](./images/role-3.png)
 
 Notice there is no specific service type described. When we check the [Kubernetes documentation](https://kubernetes.io/docs/concepts/services-networking/service/#publishing-services-service-types
-): we find that the default type is ClusterIP. This Exposes the service on a cluster-internal IP. Choosing this value makes the service only reachable from within the cluster.
+), we find that the default type is ClusterIP. This Exposes the service on a cluster-internal IP. Choosing this value makes the service only reachable from within the cluster.
 
 Lets deploy the front end service.....
 
