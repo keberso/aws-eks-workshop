@@ -6,73 +6,23 @@ The EKS console allows you to see not only the configuration aspects of your clu
 
 By default, the credentials used to create the cluster are automatically granted these permissions. Following along in the workshop, you’ve created a cluster using temporary IAM credentials from within Cloud9. This means that you’ll need to add your AWS Console credentials to the cluster.
 
-## Clone the service repos
+## Import your EKS Console credentials to your new cluster
 
-1. Clone the service repos:
+IAM Users and Roles are bound to an EKS Kubernetes cluster via a ConfigMap named aws-auth. We can use eksctl to do this with one command.
+
+You’ll need to determine the correct credential to add for your AWS Console access. Ask your instructor to help you identify the user or role used for console access.
+
+1. Identify the ARN of the user or role that you are accessing the console with. If you need assistance, ask your instructor
+
+2. With your ARN in hand, you can issue the command to create the identity mapping within the cluster.
 
     ```bash
-    cd ~/environment
-    git clone https://github.com/aws-containers/ecsdemo-frontend.git
-    git clone https://github.com/aws-containers/ecsdemo-nodejs.git
-    git clone https://github.com/aws-containers/ecsdemo-crystal.git
+    eksctl create iamidentitymapping --cluster eksworkshop-eksctl --arn ${rolearn} --group system:masters --username admin
     ```
-## Install and verify the eksctl bianaries
+Note: The ARN of an IAM role can't include the path. The format of the value you provide must be arn:aws:iam::111122223333:role/role-name
 
-1. Download and install the eksctl binary:
-
-    ```bash
-    curl --silent --location "https://github.com/weaveworks/eksctl/releases/latest/download/eksctl_$(uname -s)_amd64.tar.gz" | tar xz -C /tmp
-    sudo mv -v /tmp/eksctl /usr/local/bin
-    ```
-
-2. Confirm the eksctl command works:
+2. Verify your entry in the AWS auth map
 
     ```bash
-    eksctl version
-    ```
-
-3. Enable eksctl bash-completion
-
-    ```bash
-    eksctl completion bash >> ~/.bash_completion
-    . /etc/profile.d/bash_completion.sh
-    . ~/.bash_completion
-    ```
-## Deploy the cluster leveraging eksctl
-
-1. Create an eksctl deployment file (eksworkshop.yaml) which will be used to create your cluster using the following syntax:
-
-    ```bash
-    cat << EOF > eksworkshop.yaml
-    ---
-    apiVersion: eksctl.io/v1alpha5
-    kind: ClusterConfig
-
-    metadata:
-    name: eksworkshop-eksctl
-    region: ${AWS_REGION}
-    version: "1.19"
-
-    availabilityZones: ["${AZS[0]}", "${AZS[1]}", "${AZS[2]}"]
-
-    managedNodeGroups:
-    - name: nodegroup
-    desiredCapacity: 3
-    instanceType: t3.small
-    ssh:
-        enableSsm: true
-
-    # To enable all of the control plane logs, uncomment below:
-    # cloudWatch:
-    #  clusterLogging:
-    #    enableTypes: ["*"]
-
-    secretsEncryption:
-    keyARN: ${MASTER_ARN}
-    EOF
-    ```
-3. Use the file you created previously as input to create your first EKS cluster
-
-    ```bash
-    eksctl create cluster -f eksworkshop.yaml
+    kubectl describe configmap -n kube-system aws-auth
     ```
