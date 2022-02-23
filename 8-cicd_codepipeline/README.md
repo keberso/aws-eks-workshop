@@ -6,7 +6,7 @@ In this module, we will build a CI/CD pipeline using AWS CodePipeline. The CI/CD
 
 ## Signup for a GitHub Account
 
-1. [Visit GitHub](https://https://github.com/)
+1. [Visit GitHub](https://github.com/)
 
 2. Click "Signup"
 
