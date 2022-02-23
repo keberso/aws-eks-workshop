@@ -5,3 +5,9 @@ Continuous integration (CI) and continuous delivery (CD) are essential for deft 
 In this module, we will build a CI/CD pipeline using AWS CodePipeline. The CI/CD pipeline will deploy a sample Kubernetes service, we will make a change to the GitHub repository and observe the automated delivery of this change to the cluster.
 
 ## Signup for a GitHub Account
+
+1. [Visit GitHub](https://https://github.com/)
+
+2. Click "Signup"
+
+    ![role-1](./images/role-1.png)
