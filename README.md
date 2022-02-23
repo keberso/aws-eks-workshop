@@ -32,3 +32,6 @@ In this lab, we will show patterns for scaling your application deployments auto
 
 In this lab, we will show patterns for scaling your worker nodes automatically.
 
+## [CI/CD with AWS CodePipeline - Lab 8 (Optional)](./8-cicd_codepipeline)
+
+In this lab, we will build a CI/CD pipeline using AWS CodePipeline. The CI/CD pipeline will deploy a sample Kubernetes service, we will make a change to the GitHub repository and observe the automated delivery of this change to the cluster.
