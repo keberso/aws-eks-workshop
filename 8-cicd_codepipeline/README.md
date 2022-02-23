@@ -19,3 +19,7 @@ In this module, we will build a CI/CD pipeline using AWS CodePipeline. The CI/CD
 3. Create a password and select "Continue"
 
     ![role-3](./images/role-3.png)
+
+4. Enter and username and select "Continue"
+
+    ![role-4](./images/role-4.png)
