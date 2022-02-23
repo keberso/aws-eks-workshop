@@ -146,28 +146,28 @@ With IAM roles for service accounts on Amazon EKS clusters, you can associate an
     apiVersion: apps/v1
     kind: Deployment
     metadata:
-    name: nginx-to-scaleout
+      name: nginx-to-scaleout
     spec:
-    replicas: 1
-    selector:
+      replicas: 1
+      selector:
         matchLabels:
-        app: nginx
-    template:
+          app: nginx
+      template:
         metadata:
-        labels:
+          labels:
             service: nginx
             app: nginx
         spec:
-        containers:
-        - image: nginx
-           name: nginx-to-scaleout
-           resources:
-             limits:
-               cpu: 500m
-               memory: 512Mi
-             requests:
-               cpu: 500m
-               memory: 512Mi
+          containers:
+          - image: nginx
+            name: nginx-to-scaleout
+            resources:
+              limits:
+                cpu: 500m
+                memory: 512Mi
+              requests:
+                cpu: 500m
+                memory: 512Mi
     EoF
 
     kubectl apply -f ~/environment/cluster-autoscaler/nginx.yaml
