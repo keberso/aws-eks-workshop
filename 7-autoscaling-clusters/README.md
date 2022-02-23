@@ -160,14 +160,14 @@ With IAM roles for service accounts on Amazon EKS clusters, you can associate an
         spec:
         containers:
         - image: nginx
-          name: nginx-to-scaleout
-          resources:
-            limits:
-              cpu: 500m
-              memory: 512Mi
-            requests:
-              cpu: 500m
-              memory: 512Mi
+           name: nginx-to-scaleout
+           resources:
+             limits:
+               cpu: 500m
+               memory: 512Mi
+             requests:
+               cpu: 500m
+               memory: 512Mi
     EoF
 
     kubectl apply -f ~/environment/cluster-autoscaler/nginx.yaml
