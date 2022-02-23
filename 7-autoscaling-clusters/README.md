@@ -28,9 +28,7 @@ Cluster Autoscaler will attempt to determine the CPU, memory, and GPU resources 
     ```bash
     # we need the ASG name
     export ASG_NAME=$(aws autoscaling describe-auto-scaling-groups --query "AutoScalingGroups[? Tags[? (Key=='eks:cluster-name') && Value=='eksworkshop-eksctl']].AutoScalingGroupName" --output text)
-    ```
 
-    ```bash
     # increase max capacity up to 4
     aws autoscaling \
       update-auto-scaling-group \
@@ -38,9 +36,7 @@ Cluster Autoscaler will attempt to determine the CPU, memory, and GPU resources 
       --min-size 3 \
       --desired-capacity 3 \
       --max-size 4
-    ```
-
-    ```bash
+      
     # Check new values
     aws autoscaling \
       describe-auto-scaling-groups \
