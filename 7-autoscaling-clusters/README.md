@@ -86,3 +86,22 @@ With IAM roles for service accounts on Amazon EKS clusters, you can associate an
         --policy-name k8s-asg-policy \
         --policy-document file://~/environment/cluster-autoscaler/k8s-asg-policy.json
     ```
+
+    3. Create and IAM role for the cluster-autoscaler Service Account in the kube-system namespsce:
+
+    ```bash
+    eksctl create iamserviceaccount \
+        --name cluster-autoscaler \
+        --namespace kube-system \
+        --cluster eksworkshop-eksctl \
+        --attach-policy-arn "arn:aws:iam::${ACCOUNT_ID}:policy/k8s-asg-policy" \
+        --approve \
+        --override-existing-serviceaccounts
+    ```
+    4. Verify that your service account with the ARN of the IAM role is annotated:
+
+    ```bash
+    kubectl -n kube-system describe sa cluster-autoscaler
+    ```
+    Sample Output:
+    ![role-1](./images/role-1.png)
