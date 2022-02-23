@@ -17,3 +17,34 @@ Sample Output:
     ```bash
     helm version
     ```
+
+AWS CodePipeline and AWS CodeBuild both need AWS Identity and Access Management (IAM) service roles to create a Docker image build pipeline.
+
+In this step, we are going to create an IAM role and add an inline policy that we will use in the CodeBuild stage to interact with the EKS cluster via kubectl.
+
+2. Create the required bucket and roles with the commands below:
+
+    ```bash
+    # Use your account number below
+    ACCOUNT_ID=$(aws sts get-caller-identity | jq -r '.Account')
+    aws s3 mb s3://eksworkshop-${ACCOUNT_ID}-codepipeline-artifacts
+
+    cd ~/environment
+
+    wget https://eksworkshop.com/intermediate/260_weave_flux/iam.files/cpAssumeRolePolicyDocument.json
+
+    aws iam create-role --role-name eksworkshop-CodePipelineServiceRole --assume-role-policy-document file://cpAssumeRolePolicyDocument.json 
+
+    wget https://eksworkshop.com/intermediate/260_weave_flux/iam.files/cpPolicyDocument.json
+
+    aws iam put-role-policy --role-name eksworkshop-CodePipelineServiceRole --policy-name codepipeline-access --policy-document file://cpPolicyDocument.json
+
+    wget https://eksworkshop.com/intermediate/260_weave_flux/iam.files/cbAssumeRolePolicyDocument.json
+
+    aws iam create-role --role-name eksworkshop-CodeBuildServiceRole --assume-role-policy-document file://cbAssumeRolePolicyDocument.json 
+
+    wget https://eksworkshop.com/intermediate/260_weave_flux/iam.files/cbPolicyDocument.json
+
+    aws iam put-role-policy --role-name eksworkshop-CodeBuildServiceRole --policy-name codebuild-access --policy-document file://cbPolicyDocument.json
+
+    ```
