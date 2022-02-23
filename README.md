@@ -32,6 +32,6 @@ In this lab, we will show patterns for scaling your application deployments auto
 
 In this lab, we will show patterns for scaling your worker nodes automatically.
 
-## [GitOps with Flux - Lab 8](./8-gitops-with-flux)
+## [Patching/Upgrading Your EKS Clusters - Lab 8](./8-patching-upgrading-eks)
 
-In this lab, we will create a Docker image build pipeline using AWS CodePipeline for a sample application in a GitHub repository. We will then commit Kubernetes manifests to GitHub and monitor Weave Flux managing the deployment.
+In this lab you’ll follow the AWS suggested process to upgrade your cluster from 1.20 to 1.21 including its Managed Node Group to get first-hand experience with this process and where EKS and Managed Node Groups help.
