@@ -104,4 +104,4 @@ With IAM roles for service accounts on Amazon EKS clusters, you can associate an
     kubectl -n kube-system describe sa cluster-autoscaler
     ```
     Sample Output:
-    ![role-1](./images/role-1.png)
+    ![role-1](./images/role-2.png)
