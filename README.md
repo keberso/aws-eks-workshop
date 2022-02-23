@@ -32,6 +32,6 @@ In this lab, we will show patterns for scaling your application deployments auto
 
 In this lab, we will show patterns for scaling your worker nodes automatically.
 
-## [Autoscaling Clusters - Lab 8](./8-gitops-with-flux)
+## [GitOps with Flux - Lab 8](./8-gitops-with-flux)
 
 In this lab, we will create a Docker image build pipeline using AWS CodePipeline for a sample application in a GitHub repository. We will then commit Kubernetes manifests to GitHub and monitor Weave Flux managing the deployment.
