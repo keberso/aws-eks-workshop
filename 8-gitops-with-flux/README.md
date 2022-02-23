@@ -9,3 +9,11 @@ Below is a diagram of what will be created:
 Sample Output:
 
 ![role-1](./images/role-1.png)
+
+## Install and validate Prerequisites
+
+1. We will use helm to install Weave Flux and a sample Helm chart. Check to see if helm is installed:
+
+    ```bash
+    helm version
+    ```
