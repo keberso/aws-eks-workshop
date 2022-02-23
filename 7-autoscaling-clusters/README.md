@@ -186,3 +186,13 @@ With IAM roles for service accounts on Amazon EKS clusters, you can associate an
     ```
     Sample Output:
     ![role-3](./images/role-3.png)
+
+Check the EC2 AWS Management Console to confirm that the Auto Scaling groups are scaling up to meet demand. This may take a few minutes. You can also follow along with the pod deployment from the command line. You should see the pods transition from pending to running as nodes are scaled up.
+
+You can also use the command line to vew the nodes scale by running the following command:
+
+    ```bash
+    kubectl get nodes
+    ```
+    Sample Output:
+    ![role-4](./images/role-4.png)
