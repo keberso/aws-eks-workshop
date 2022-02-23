@@ -21,4 +21,4 @@ Cluster Autoscaler will attempt to determine the CPU, memory, and GPU resources 
     --output table
     ```
     Sample Output:
-        ![role-1](./images/role-1.png)
+    ![role-1](./images/role-1.png)
