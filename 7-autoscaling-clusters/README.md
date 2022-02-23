@@ -195,4 +195,5 @@ With IAM roles for service accounts on Amazon EKS clusters, you can associate an
     kubectl get nodes
     ```
     Sample Output:
+    
     ![role-4](./images/role-4.png)
