@@ -32,6 +32,3 @@ In this lab, we will show patterns for scaling your application deployments auto
 
 In this lab, we will show patterns for scaling your worker nodes automatically.
 
-## [Patching/Upgrading Your EKS Clusters - Lab 8](./8-patching-upgrading-eks)
-
-In this lab you’ll follow the AWS suggested process to upgrade your cluster from 1.20 to 1.21 including its Managed Node Group to get first-hand experience with this process and where EKS and Managed Node Groups help.
