@@ -23,3 +23,11 @@ In this module, we will build a CI/CD pipeline using AWS CodePipeline. The CI/CD
 4. Enter and username and select "Continue"
 
     ![role-4](./images/role-4.png)
+
+5. Type "n" to not recive product updates and annoucements and select "Continue"
+
+    ![role-5](./images/role-5.png)
+
+6. Select "Create account"
+
+    ![role-6](./images/role-6.png)
