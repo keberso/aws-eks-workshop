@@ -131,8 +131,47 @@ With IAM roles for service accounts on Amazon EKS clusters, you can associate an
         set image deployment.apps/cluster-autoscaler \
         cluster-autoscaler=us.gcr.io/k8s-artifacts-prod/autoscaling/cluster-autoscaler:v${AUTOSCALER_VERSION}
     ```
-4. Watch the logs:
+4. Use the following command to watch the CA logs:
 
     ```bash
     kubectl -n kube-system logs -f deployment/cluster-autoscaler
+    ```
+
+## Scale the Cluster with Cluster Autoscaler (CA)
+
+1. Deploy sample nginx application as a ReplicaSet of 1 Pod:
+
+    ```bash
+    cat <<EoF> ~/environment/cluster-autoscaler/nginx.yaml
+    apiVersion: apps/v1
+    kind: Deployment
+    metadata:
+      name: nginx-to-scaleout
+    spec:
+      replicas: 1
+      selector:
+        matchLabels:
+          app: nginx
+      template:
+        metadata:
+          labels:
+            service: nginx
+            app: nginx
+      spec:
+        containers:
+        - image: nginx
+          name: nginx-to-scaleout
+          resources:
+            limits:
+              cpu: 500m
+              memory: 512Mi
+            requests:
+              cpu: 500m
+              memory: 512Mi
+    EoF
+
+    kubectl apply -f ~/environment/cluster-autoscaler/nginx.yaml
+
+    kubectl get deployment/nginx-to-scaleout
+
     ```
