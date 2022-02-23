@@ -23,7 +23,7 @@ Cluster Autoscaler will attempt to determine the CPU, memory, and GPU resources 
     Sample Output:
     ![role-1](./images/role-1.png)
 
-1. Increase the maximum capacity to 4 instances and check the new values:
+2. Increase the maximum capacity to 4 instances and check the new values:
     
     ```bash
     # we need the ASG name
@@ -36,10 +36,53 @@ Cluster Autoscaler will attempt to determine the CPU, memory, and GPU resources 
       --min-size 3 \
       --desired-capacity 3 \
       --max-size 4
-      
+
     # Check new values
     aws autoscaling \
       describe-auto-scaling-groups \
       --query "AutoScalingGroups[? Tags[? (Key=='eks:cluster-name') && Value=='eksworkshop-eksctl']].[AutoScalingGroupName, MinSize, MaxSize,DesiredCapacity]" \
       --output table
+    ```
+## IAM Roles for Service Accounts (IRSA)
+
+Note: [Click here](https://www.eksworkshop.com/beginner/110_irsa/) if you would like more information for IAM Roles for Service Accounts.
+
+With IAM roles for service accounts on Amazon EKS clusters, you can associate an IAM role with a Kubernetes service account. This service account can then provide AWS permissions to the containers in any pod that uses that service account. With this feature, you no longer need to provide extended permissions to the node IAM role so that pods on that node can call AWS APIs.
+
+1. Associate IAM OIDC Provider with your Cluster:
+
+    ```bash
+    eksctl utils associate-iam-oidc-provider \
+    --cluster eksworkshop-eksctl \
+    --approve
+    ```
+2. Creating an IAM policy for your service account that will allow your CA pod to interact with the autoscaling groups:
+
+    ```bash
+    mkdir ~/environment/cluster-autoscaler
+
+    cat <<EoF > ~/environment/cluster-autoscaler/k8s-asg-policy.json
+    {
+        "Version": "2012-10-17",
+        "Statement": [
+            {
+                "Action": [
+                    "autoscaling:DescribeAutoScalingGroups",
+                    "autoscaling:DescribeAutoScalingInstances",
+                    "autoscaling:DescribeLaunchConfigurations",
+                    "autoscaling:DescribeTags",
+                    "autoscaling:SetDesiredCapacity",
+                    "autoscaling:TerminateInstanceInAutoScalingGroup",
+                    "ec2:DescribeLaunchTemplateVersions"
+                ],
+                "Resource": "*",
+                "Effect": "Allow"
+            }
+        ]
+    }
+    EoF
+
+    aws iam create-policy   \
+        --policy-name k8s-asg-policy \
+        --policy-document file://~/environment/cluster-autoscaler/k8s-asg-policy.json
     ```
