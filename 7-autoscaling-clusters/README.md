@@ -105,3 +105,34 @@ With IAM roles for service accounts on Amazon EKS clusters, you can associate an
     ```
     Sample Output:
     ![role-1](./images/role-2.png)
+
+## Deploy the Cluster Autoscaler (CA)
+
+1. Deploy the Cluster Autoscaler to your cluster with the following command:
+
+    ```bash
+    kubectl apply -f https://www.eksworkshop.com/beginner/080_scaling/deploy_ca.files/cluster-autoscaler-autodiscover.yaml
+    ```
+2. To prevent CA from removing nodes where its own pod is running, we will add the cluster-autoscaler.kubernetes.io/safe-to-evict annotation to its deployment with the following command:
+
+    ```bash
+    kubectl -n kube-system \
+    annotate deployment.apps/cluster-autoscaler \
+    cluster-autoscaler.kubernetes.io/safe-to-evict="false"
+    ```
+3. Update the autoscaler image with the following command:
+
+    ```bash
+    # we need to retrieve the latest docker image available for our EKS version
+    export K8S_VERSION=$(kubectl version --short | grep 'Server Version:' | sed 's/[^0-9.]*\([0-9.]*\).*/\1/' | cut -d. -f1,2)
+    export AUTOSCALER_VERSION=$(curl -s "https://api.github.com/repos/kubernetes/autoscaler/releases" | grep '"tag_name":' | sed -s 's/.*-\([0-9][0-9\.]*\).*/\1/' | grep -m1 ${K8S_VERSION})
+
+    kubectl -n kube-system \
+        set image deployment.apps/cluster-autoscaler \
+        cluster-autoscaler=us.gcr.io/k8s-artifacts-prod/autoscaling/cluster-autoscaler:v${AUTOSCALER_VERSION}
+    ```
+4. Watch the logs:
+
+    ```bash
+    kubectl -n kube-system logs -f deployment/cluster-autoscaler
+    ```
