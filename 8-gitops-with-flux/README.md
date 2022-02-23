@@ -6,5 +6,6 @@ In this module, we will create a Docker image build pipeline using AWS CodePipel
 
 Below is a diagram of what will be created:
 
-    Sample Output:
-    ![role-1](./images/role-1.png)
+Sample Output:
+
+![role-1](./images/role-1.png)
