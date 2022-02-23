@@ -174,12 +174,12 @@ With IAM roles for service accounts on Amazon EKS clusters, you can associate an
 
     kubectl get deployment/nginx-to-scaleout
     ```
-    2. Scale out the replica set to 10 with the following command:
+2. Scale out the replica set to 10 with the following command:
 
     ```bash
     kubectl scale --replicas=10 deployment/nginx-to-scaleout
     ```
-    3. Some pods will be in the pending state, which triggers the cluster-autoscaler to scale out the worker nodes/EC2 fleet. Use the following command to watch the scaling activities:
+3. Some pods will be in the pending state, which triggers the cluster-autoscaler to scale out the worker nodes/EC2 fleet. Use the following command to watch the scaling activities:
 
     ```bash
     kubectl get pods -l app=nginx -o wide --watch
