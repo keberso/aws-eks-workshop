@@ -31,3 +31,11 @@ In this module, we will build a CI/CD pipeline using AWS CodePipeline. The CI/CD
 6. Select "Create account"
 
     ![role-6](./images/role-6.png)
+
+Note: You will recive an launch code to the e-mail you specified. Enter the code.
+
+7. Select "Just me", "Student" and select "Continue"
+
+    ![role-7](./images/role-7.png)
+
+    Note: Skip all personlizations.
