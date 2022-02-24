@@ -159,6 +159,12 @@ You can modify the CloudFormation templates provided with this workshop to meet 
 
 So far we have walked through setting up CI/CD for EKS using AWS CodePipeline and now we are going to make a change to the GitHub repository so that we can see a new release built and delivered.
 
-Open GitHub and select the forked repository with the name eks-workshop-sample-api-service-go.
+1. [Open GitHub](https://github.com/) and select the forked repository with the name eks-workshop-sample-api-service-go.
 
-Click on main.go file and then click on the edit button, which looks like a pencil.
+2. Double click on main.go file 
+
+![role-15](./images/role-15.png)
+
+3. Click on the edit button, which looks like a pencil.
+
+![role-16](./images/role-16.png)
