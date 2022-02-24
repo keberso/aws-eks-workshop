@@ -175,3 +175,6 @@ So far we have walked through setting up CI/CD for EKS using AWS CodePipeline an
 4. Change the text where it says “Hello World”, add a commit message and then click the “Commit changes” button.
 
 ![role-17](./images/role-17.png)
+
+5. After you modify and commit your change in GitHub, in approximately one minute you will see a new build triggered in the [AWS Managment Console](https://console.aws.amazon.com/codesuite/codepipeline/pipelines) 
+
