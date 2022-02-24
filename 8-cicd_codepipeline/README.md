@@ -178,3 +178,13 @@ So far we have walked through setting up CI/CD for EKS using AWS CodePipeline an
 
 5. After you modify and commit your change in GitHub, in approximately one minute you will see a new build triggered in the [AWS Managment Console](https://console.aws.amazon.com/codesuite/codepipeline/pipelines) 
 
+![role-18](./images/role-18.png)
+
+6. If you still have the ELB URL open in your browser, refresh to confirm the update. If you need to retrieve the URL again, use the following command:
+
+    ```bash
+    kubectl get services hello-k8s -o wide
+    ```
+
+
+## Congratulations, you have succesfully deployed your first CI/CD pipeline!!!
