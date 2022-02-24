@@ -168,3 +168,7 @@ So far we have walked through setting up CI/CD for EKS using AWS CodePipeline an
 3. Click on the edit button, which looks like a pencil.
 
 ![role-16](./images/role-16.png)
+
+4. Change the text where it says “Hello World”, add a commit message and then click the “Commit changes” button.
+
+![role-17](./images/role-17.png)
