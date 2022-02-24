@@ -78,3 +78,19 @@ In this step, we are going to create an IAM role and add an inline policy that w
 
 ## Fork the Sample Repository
 
+We are now going to fork the sample Kubernetes service so that we will be able modify the repository and trigger builds.
+
+Login to GitHub and fork the sample service to your own account:
+
+https://github.com/rnzsgh/eks-workshop-sample-api-service-go
+
+1. As shown below, select the link above and click fork:
+
+    ![role-8](./images/role-8.png)
+
+
+Once the repo is forked, you can view it in your your GitHub repositories.
+
+The forked repo will look like:
+
+![role-9](./images/role-9.png)
