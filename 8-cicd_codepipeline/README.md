@@ -80,7 +80,7 @@ In this step, we are going to create an IAM role and add an inline policy that w
 
 We are now going to fork the sample Kubernetes service so that we will be able modify the repository and trigger builds.
 
-Login to GitHub and fork the sample service to your own account:
+Login to GitHub using the account created above
 
 https://github.com/rnzsgh/eks-workshop-sample-api-service-go
 
@@ -101,9 +101,7 @@ In order for CodePipeline to receive callbacks from GitHub, we need to generate 
 
 Once created, an access token can be stored in a secure enclave and reused, so this step is only required during the first run or when you need to generate new keys.
 
-Open up the New personal access page in GitHub.
-
-1. Within open your GitHub account and click past in the following URL:
+1. Open your GitHub account and click the link below:
 
     https://github.com/settings/tokens/new
 
@@ -129,19 +127,19 @@ You can modify the CloudFormation templates provided with this workshop to meet 
 
     ![role-11](./images/role-11.png)
 
-Wait for the status to change from “CREATE_IN_PROGRESS” to CREATE_COMPLETE before moving on to the next step.
+    Wait for the status to change from “CREATE_IN_PROGRESS” to CREATE_COMPLETE before moving on to the next step.
 
 ![role-12](./images/role-12.png)
 
 3. Open CodePipeline in the Management Console. You will see a CodePipeline that starts with eks-workshop-codepipeline. [Click this link](https://console.aws.amazon.com/codesuite/codepipeline/pipelines) to view the details.
 
-Note: If you receive a permissions error similar to User x is not authorized to perform: codepipeline:ListPipelines… upon clicking the above link, the CodePipeline console may have opened up in the wrong region. To correct this, from the Region dropdown in the console, choose the region you provisioned the workshop in (N. Virginia (US-EAST-1)).
+    Note: If you receive a permissions error similar to User x is not authorized to perform: codepipeline:ListPipelines… upon clicking the above link, the CodePipeline console may have opened up in the wrong region. To correct this, from the Region dropdown in the console, choose the region you provisioned the workshop in (N. Virginia (US-EAST-1)).
 
 ![role-13](./images/role-13.png)
 
 4. Select the pipeline that starts with eks-workshop-codepipeline.
 
-Note: Once you are on the detail page for the specific CodePipeline, you can see the status along with links to the change and build details.
+    Note: Once you are on the detail page for the specific CodePipeline, you can see the status along with links to the change and build details.
 
 ![role-14](./images/role-14.png)
 
@@ -151,7 +149,7 @@ Note: Once you are on the detail page for the specific CodePipeline, you can see
     kubectl describe deployment hello-k8s
     ```
 
-Note: Once the service is built and delivered, we can run the following command to get the Elastic Load Balancer (ELB) endpoint and open it in a browser. If the message is not updated immediately, give Kubernetes some time to deploy the change.
+    Note: Once the service is built and delivered, we can run the following command to get the Elastic Load Balancer (ELB) endpoint and open it in a browser. If the message is not updated immediately, give Kubernetes some time to deploy the change.
 
     ```bash
     kubectl get services hello-k8s -o wide
