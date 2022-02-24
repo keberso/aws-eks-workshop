@@ -119,9 +119,11 @@ Each EKS deployment/service should have its own CodePipeline and be located in a
 
 You can modify the CloudFormation templates provided with this workshop to meet your system requirements to easily onboard new services to your EKS cluster. For each new service the following steps can be repeated.
 
-1. [Click here](https://console.aws.amazon.com/cloudformation/home?#/stacks/create/review?stackName=eksws-codepipeline&templateURL=https://s3.amazonaws.com/eksworkshop.com/templates/main/ci-cd-codepipeline.cfn.yml) to create the CloudFormation stack in the AWS Management Console.
+1. Ensure that you are logged into your AWS account
 
-2. After the console is open, enter your GitHub username, personal access token (created in previous step), check the " I acknowledge that AWS CloudFormation might create IAM resources" check box and then click the “Create stack” button located at the bottom of the page.
+2. [Click here](https://console.aws.amazon.com/cloudformation/home?#/stacks/create/review?stackName=eksws-codepipeline&templateURL=https://s3.amazonaws.com/eksworkshop.com/templates/main/ci-cd-codepipeline.cfn.yml) to create the CloudFormation stack in the AWS Management Console.
+
+3. After the console is open, enter your GitHub username, personal access token (created in previous step), check the " I acknowledge that AWS CloudFormation might create IAM resources" check box and then click the “Create stack” button located at the bottom of the page.
 
     ![role-11](./images/role-11.png)
 
@@ -135,13 +137,13 @@ You can modify the CloudFormation templates provided with this workshop to meet 
 
 ![role-13](./images/role-13.png)
 
-4. Select the pipeline that starts with eks-workshop-codepipeline.
+5. Select the pipeline that starts with eks-workshop-codepipeline.
 
     Note: Once you are on the detail page for the specific CodePipeline, you can see the status along with links to the change and build details.
 
 ![role-14](./images/role-14.png)
 
-5. To review the status of the Kubernetes deployment, go back to your Cloud9 environment and run the following command:
+6. To review the status of the Kubernetes deployment, go back to your Cloud9 environment and run the following command:
 
     ```bash
     kubectl describe deployment hello-k8s
