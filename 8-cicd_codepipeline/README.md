@@ -161,13 +161,16 @@ So far we have walked through setting up CI/CD for EKS using AWS CodePipeline an
 
 1. [Open GitHub](https://github.com/) and select the forked repository with the name eks-workshop-sample-api-service-go.
 
+
 2. Double click on main.go file 
 
 ![role-15](./images/role-15.png)
 
+
 3. Click on the edit button, which looks like a pencil.
 
 ![role-16](./images/role-16.png)
+
 
 4. Change the text where it says “Hello World”, add a commit message and then click the “Commit changes” button.
 
