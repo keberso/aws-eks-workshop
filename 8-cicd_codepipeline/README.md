@@ -24,7 +24,7 @@ In this module, we will build a CI/CD pipeline using AWS CodePipeline. The CI/CD
 
     ![role-4](./images/role-4.png)
 
-5. Type "n" to not recive product updates and annoucements and select "Continue"
+5. Type "n" to not recieve product updates and annoucements and select "Continue"
 
     ![role-5](./images/role-5.png)
 
@@ -80,11 +80,11 @@ In this step, we are going to create an IAM role and add an inline policy that w
 
 We are now going to fork the sample Kubernetes service so that we will be able modify the repository and trigger builds.
 
-Login to GitHub using the account created above
+Login to your new GitHub account using the account created above
 
-https://github.com/rnzsgh/eks-workshop-sample-api-service-go
 
-1. As shown below, select the link above and click fork:
+
+1. As shown below, [Click here](https://github.com/rnzsgh/eks-workshop-sample-api-service-go) and select fork:
 
     ![role-8](./images/role-8.png)
 
