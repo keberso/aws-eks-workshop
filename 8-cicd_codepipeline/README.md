@@ -40,7 +40,7 @@ Note: You will recive an launch code to the e-mail you specified. Enter the code
 
     Note: Skip all personalization’s.
 
-## Creat IAM Role
+## Create IAM Role
 
 In an AWS CodePipeline, we are going to use AWS CodeBuild to deploy a sample Kubernetes service. This requires an AWS Identity and Access Management (IAM) role capable of interacting with the EKS cluster.
 
@@ -75,3 +75,6 @@ In this step, we are going to create an IAM role and add an inline policy that w
 
     kubectl patch configmap/aws-auth -n kube-system --patch "$(cat /tmp/aws-auth-patch.yml)"
     ```
+
+## Fork the Sample Repository
+
