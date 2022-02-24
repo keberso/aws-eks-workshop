@@ -99,9 +99,9 @@ In order for CodePipeline to receive callbacks from GitHub, we need to generate 
 
 Once created, an access token can be stored in a secure enclave and reused, so this step is only required during the first run or when you need to generate new keys.
 
-1. Open your GitHub account and click the link below:
+1. Open your GitHub account and [Click here](https://github.com/settings/tokens/new)
 
-    https://github.com/settings/tokens/new
+    
 
 2. Enter eks-workshop for Token description, check the repo permission scope and scroll down and click the Generate token button
 
