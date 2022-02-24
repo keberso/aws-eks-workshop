@@ -94,3 +94,73 @@ Once the repo is forked, you can view it in your your GitHub repositories.
 The forked repo will look like:
 
 ![role-9](./images/role-9.png)
+
+## Generate GitHub Access Token
+
+In order for CodePipeline to receive callbacks from GitHub, we need to generate a personal access token.
+
+Once created, an access token can be stored in a secure enclave and reused, so this step is only required during the first run or when you need to generate new keys.
+
+Open up the New personal access page in GitHub.
+
+1. Within open your GitHub account and click past in the following URL:
+
+    https://github.com/settings/tokens/new
+
+2. Enter eks-workshop for Token description, check the repo permission scope and scroll down and click the Generate token button
+
+    ![role-10](./images/role-10.png)
+
+   Copy the personal access token and save it in a secure place for the next step...
+
+## AWS CodePipeline Setup
+
+Now we are going to create the AWS CodePipeline using AWS CloudFormation.
+
+CloudFormation is an infrastructure as code (IaC) tool which provides a common language for you to describe and provision all the infrastructure resources in your cloud environment. CloudFormation allows you to use a simple text file to model and provision, in an automated and secure manner, all the resources needed for your applications across all regions and accounts.
+
+Each EKS deployment/service should have its own CodePipeline and be located in an isolated source repository.
+
+You can modify the CloudFormation templates provided with this workshop to meet your system requirements to easily onboard new services to your EKS cluster. For each new service the following steps can be repeated.
+
+1. [Click here](https://console.aws.amazon.com/cloudformation/home?#/stacks/create/review?stackName=eksws-codepipeline&templateURL=https://s3.amazonaws.com/eksworkshop.com/templates/main/ci-cd-codepipeline.cfn.yml) to create the CloudFormation stack in the AWS Management Console.
+
+2. After the console is open, enter your GitHub username, personal access token (created in previous step), check the " I acknowledge that AWS CloudFormation might create IAM resources" check box and then click the “Create stack” button located at the bottom of the page.
+
+    ![role-11](./images/role-11.png)
+
+Wait for the status to change from “CREATE_IN_PROGRESS” to CREATE_COMPLETE before moving on to the next step.
+
+![role-12](./images/role-12.png)
+
+3. Open CodePipeline in the Management Console. You will see a CodePipeline that starts with eks-workshop-codepipeline. [Click this link](https://console.aws.amazon.com/codesuite/codepipeline/pipelines) to view the details.
+
+Note: If you receive a permissions error similar to User x is not authorized to perform: codepipeline:ListPipelines… upon clicking the above link, the CodePipeline console may have opened up in the wrong region. To correct this, from the Region dropdown in the console, choose the region you provisioned the workshop in (N. Virginia (US-EAST-1)).
+
+![role-13](./images/role-13.png)
+
+4. Select the pipeline that starts with eks-workshop-codepipeline.
+
+Note: Once you are on the detail page for the specific CodePipeline, you can see the status along with links to the change and build details.
+
+![role-14](./images/role-14.png)
+
+5. To review the status of the Kubernetes deployment, go back to your Cloud9 environment and run the following command:
+
+    ```bash
+    kubectl describe deployment hello-k8s
+    ```
+
+Note: Once the service is built and delivered, we can run the following command to get the Elastic Load Balancer (ELB) endpoint and open it in a browser. If the message is not updated immediately, give Kubernetes some time to deploy the change.
+
+    ```bash
+    kubectl get services hello-k8s -o wide
+    ```
+
+## Trigger a New Release
+
+So far we have walked through setting up CI/CD for EKS using AWS CodePipeline and now we are going to make a change to the GitHub repository so that we can see a new release built and delivered.
+
+Open GitHub and select the forked repository with the name eks-workshop-sample-api-service-go.
+
+Click on main.go file and then click on the edit button, which looks like a pencil.
