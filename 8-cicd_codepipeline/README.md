@@ -42,9 +42,9 @@ Note: You will recive an launch code to the e-mail you specified. Enter the code
 
 ## Creat IAM Role
 
-In an AWS CodePipeline, we are going to use AWS CodeBuild to deploy a sample Kubernetes service. This requires an AWS Identity and Access Management (IAM) role capable of interacting with the EKS cluster.
+    In an AWS CodePipeline, we are going to use AWS CodeBuild to deploy a sample Kubernetes service. This requires an AWS Identity and Access Management (IAM) role capable of interacting with the EKS cluster.
 
-In this step, we are going to create an IAM role and add an inline policy that we will use in the CodeBuild stage to interact with the EKS cluster via kubectl.
+    In this step, we are going to create an IAM role and add an inline policy that we will use in the CodeBuild stage to interact with the EKS cluster via kubectl.
 
 1. Create the role by running the following command:
 
@@ -60,9 +60,9 @@ In this step, we are going to create an IAM role and add an inline policy that w
     aws iam put-role-policy --role-name EksWorkshopCodeBuildKubectlRole --policy-name eks-describe --policy-document file:///tmp/iam-role-policy
     ```
 
-Now that we have the IAM role created, we are going to add the role to the aws-auth ConfigMap for the EKS cluster.
+    Now that we have the IAM role created, we are going to add the role to the aws-auth ConfigMap for the EKS cluster.
 
-Once the ConfigMap includes this new role, kubectl in the CodeBuild stage of the pipeline will be able to interact with the EKS cluster via the IAM role.
+    Once the ConfigMap includes this new role, kubectl in the CodeBuild stage of the pipeline will be able to interact with the EKS cluster via the IAM role.
 
 2. To add the role to the aws-auth ConfigMap for your cluster, run the following command:
 
