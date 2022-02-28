@@ -69,3 +69,6 @@ In this lab we will build your Cloud9 Development Environment and provide it the
  ![role-5](./images/role-5.png)
 
 12. Return to Cloud9 Workspace.
+
+## Contgratulations!
+   You now have a a Cloud9 Development Environment! 

@@ -86,3 +86,6 @@ This lab installs the tools into your development environment required for the r
     export MASTER_ARN=$(aws kms describe-key --key-id alias/eksworkshop --query KeyMetadata.Arn --output text)
     echo "export MASTER_ARN=${MASTER_ARN}" | tee -a ~/.bash_profile
     ```
+
+## Contgratulations!
+   You now have the tools required for the remaing labs installed and configured in your Cloud9 Development Environment!
