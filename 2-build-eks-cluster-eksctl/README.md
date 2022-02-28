@@ -82,6 +82,6 @@
     ROLE_NAME=$(aws cloudformation describe-stack-resources --stack-name $STACK_NAME | jq -r '.StackResources[] | select(.ResourceType=="AWS::IAM::Role") | .PhysicalResourceId')
     echo "export ROLE_NAME=${ROLE_NAME}" | tee -a ~/.bash_profile
     ```
-## Contgratulations!
+## Congratulations!
    You now have a fully working Amazon EKS cluster that is ready to use! 
    

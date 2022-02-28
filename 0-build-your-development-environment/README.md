@@ -70,5 +70,5 @@ In this lab we will build your Cloud9 Development Environment and provide it the
 
 12. Return to Cloud9 Workspace.
 
-## Contgratulations!
+## Congratulations!
    You now have a a Cloud9 Development Environment! 

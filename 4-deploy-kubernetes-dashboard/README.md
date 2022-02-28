@@ -44,5 +44,5 @@ The official Kubernetes dashboard is not deployed by default, but there are inst
 
 5. Select "SIGN IN"
 
-## Contgratulations!
+## Congratulations!
    You have deployed the Kubernetes Dashboard! 

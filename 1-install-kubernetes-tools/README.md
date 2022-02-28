@@ -87,5 +87,5 @@ This lab installs the tools into your development environment required for the r
     echo "export MASTER_ARN=${MASTER_ARN}" | tee -a ~/.bash_profile
     ```
 
-## Contgratulations!
+## Congratulations!
    You now have the tools required for the remaing labs installed and configured in your Cloud9 Development Environment!
