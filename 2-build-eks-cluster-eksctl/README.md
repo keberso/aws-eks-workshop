@@ -45,7 +45,7 @@
     metadata:
       name: eksworkshop-eksctl
       region: ${AWS_REGION}
-      version: "1.19"
+      version: "1.20"
 
     availabilityZones: ["${AZS[0]}", "${AZS[1]}", "${AZS[2]}"]
 
