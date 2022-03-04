@@ -24,7 +24,7 @@ In this module, we will build a CI/CD pipeline using AWS CodePipeline. The CI/CD
 
     ![role-4](./images/role-4.png)
 
-5. Type "n" to not recieve product updates and annoucements and select "Continue"
+5. Type "n" to not receive product updates and announcements and select "Continue"
 
     ![role-5](./images/role-5.png)
 
@@ -32,7 +32,7 @@ In this module, we will build a CI/CD pipeline using AWS CodePipeline. The CI/CD
 
     ![role-6](./images/role-6.png)
 
-Note: You will recive an launch code to the e-mail you specified. Enter the code.
+Note: You will receive a launch code at the e-mail you specified. Enter the code.
 
 7. Select "Just me", "Student" and select "Continue"
 
@@ -176,7 +176,7 @@ So far we have walked through setting up CI/CD for EKS using AWS CodePipeline an
 
 ![role-17](./images/role-17.png)
 
-5. After you modify and commit your change in GitHub, in approximately one minute you will see a new build triggered in the [AWS Managment Console](https://console.aws.amazon.com/codesuite/codepipeline/pipelines) 
+5. After you modify and commit your change in GitHub, in approximately one minute you will see a new build triggered in the [AWS Management Console](https://console.aws.amazon.com/codesuite/codepipeline/pipelines) 
 
 ![role-18](./images/role-18.png)
 
@@ -187,4 +187,4 @@ So far we have walked through setting up CI/CD for EKS using AWS CodePipeline an
     ```
 
 
-## Congratulations, you have succesfully deployed your first CI/CD pipeline!!!
+## Congratulations, you have successfully deployed your first CI/CD pipeline!!!

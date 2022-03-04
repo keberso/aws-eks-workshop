@@ -91,7 +91,7 @@ Lets deploy the front end service.....
     ```bash
     kubectl get service ecsdemo-frontend -o wide
     ```
-2. (Optional)f we wanted to use the data programatically, we can also output via json. This is an example of how we might be able to make use of json output:
+2. (Optional)f we wanted to use the data programmatically, we can also output via json. This is an example of how we might be able to make use of json output:
 
     ```bash
     ELB=$(kubectl get service ecsdemo-frontend -o json | jq -r '.status.loadBalancer.ingress[].hostname')
@@ -99,7 +99,7 @@ Lets deploy the front end service.....
     ```
     Note: It will take several minutes for the ELB to become healthy and start passing traffic to the frontend pods.
 
-3. Use the url outputed from step 2 and paste it into your browser.
+3. Use the url outputted from step 2 and paste it into your browser.
 
 ![role-4](./images/role-4.png)
 
@@ -139,5 +139,5 @@ Lets deploy the front end service.....
 
     Note: Also, check the browser tab where we can see our application running. You should now see traffic flowing to multiple backend services.
 
-## Contgratulations!
+## Congratulations!
    You have created and scaled your first Kubernetes service! 

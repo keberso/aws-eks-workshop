@@ -18,7 +18,7 @@ We will use Helm for the deployment. Helm is a package manager for Kubernetes th
     ```bash
     helm version --short
     ```
-3. Download the stable respository:
+3. Download the stable repository:
 
     ```bash
     helm repo add stable https://charts.helm.sh/stable
@@ -45,7 +45,7 @@ We will use Helm for the deployment. Helm is a package manager for Kubernetes th
     ```
     Note: The execution above installs kube-ops-view exposing it through a Service using the LoadBalancer type. A successful execution of the command will display the set of resources created and will prompt some advice asking you to use kubectl proxy and a local URL for the service. Given we are using the type LoadBalancer for our service, we can disregard this; Instead we will point our browser to the external load balancer.
 
-2. Run the following command to verify that chart was installed succesfully:
+2. Run the following command to verify that chart was installed successfully:
 
     ```bash
     helm list
@@ -97,7 +97,7 @@ The application is a custom-built image based on the php-apache image. The index
 
 ## Create a HPA Resource
 
-1. Run the commands below to create and HPA resource that sclaes up when CPU exceeds 50% of the allocated container resource:
+1. Run the commands below to create and HPA resource that scales up when CPU exceeds 50% of the allocated container resource:
 
     ```bash
     kubectl autoscale deployment php-apache `#The target average CPU utilization` \
@@ -122,7 +122,7 @@ The application is a custom-built image based on the php-apache image. The index
     ```bash
     while true; do wget -q -O - http://php-apache; done
     ```    
-3. In the previous terminal, watch the HPA with the fllowing command:
+3. In the previous terminal, watch the HPA with the following command:
 
     ```bash
     kubectl get hpa -w

@@ -1,6 +1,6 @@
 # Console Credentials - Lab 3
 
-This step is optional, as nearly all of the workshop content is CLI-driven. But, if you’d like full access to your workshop cluster in the EKS console this step is recommended.
+This step is optional, as nearly all the workshop content is CLI-driven. But, if you’d like full access to your workshop cluster in the EKS console this step is recommended.
 
 The EKS console allows you to see not only the configuration aspects of your cluster, but also to view Kubernetes cluster objects such as Deployments, Pods, and Nodes. For this type of access, the console IAM User or Role needs to be granted permission within the cluster.
 
